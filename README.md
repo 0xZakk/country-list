@@ -21,6 +21,8 @@ world using the [REST Countries](https://restcountries.eu) API.
 
 ## Requirements
 
+### We do: Part 1: Build it
+
 Make it so that when the page loads (`App.js`), a list of all the countries in
 the world appears on the page. Use `fetch()` inside of `componentDidMount()` to
 query the [REST Countries](https://restcountries.eu) API.
@@ -37,82 +39,64 @@ Here's a sample response of one country:
 ```json
 [
   {
-    name: "Congo",
-    topLevelDomain: [
-      ".cg"
-    ],
-    alpha2Code: "CG",
-    alpha3Code: "COG",
-    callingCodes: [
-      "242"
-    ],
-    capital: "Brazzaville",
-    altSpellings: [
-      "CG",
-      "Congo-Brazzaville"
-    ],
-    region: "Africa",
-    subregion: "Middle Africa",
-    population: 4741000,
-    latlng: [
-      -1,
-      15
-    ],
-    demonym: "Congolese",
-    area: 342000,
-    gini: 47.3,
-    timezones: [
-      "UTC+01:00"
-    ],
-    borders: [
-      "AGO",
-      "CMR",
-      "CAF",
-      "COD",
-      "GAB"
-    ],
-    nativeName: "République du Congo",
-    numericCode: "178",
-    currencies: [
+    "name": "Congo",
+    "topLevelDomain": [".cg"],
+    "alpha2Code": "CG",
+    "alpha3Code": "COG",
+    "callingCodes": ["242"],
+    "capital": "Brazzaville",
+    "altSpellings": ["CG", "Congo-Brazzaville"],
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 4741000,
+    "latlng": [-1, 15],
+    "demonym": "Congolese",
+    "area": 342000,
+    "gini": 47.3,
+    "timezones": ["UTC+01:00"],
+    "borders": ["AGO", "CMR", "CAF", "COD", "GAB"],
+    "nativeName": "République du Congo",
+    "numericCode": "178",
+    "currencies": [
       {
-        code: "XAF",
-        name: "Central African CFA franc",
-        symbol: "Fr"
+        "code": "XAF",
+        "name": "Central African CFA franc",
+        "symbol": "Fr"
       }
     ],
-    languages: [
+    "languages": [
       {
-        iso639_1: "fr",
-        iso639_2: "fra",
-        name: "French",
-        nativeName: "français"
+        "iso639_1": "fr",
+        "iso639_2": "fra",
+        "name": "French",
+        "nativeName": "français"
       },
       {
-        iso639_1: "ln",
-        iso639_2: "lin",
-        name: "Lingala",
-        nativeName: "Lingála"
+        "iso639_1": "ln",
+        "iso639_2": "lin",
+        "name": "Lingala",
+        "nativeName": "Lingála"
       }
     ],
-    translations: {
-      de: "Kongo",
-      es: "Congo",
-      fr: "Congo",
-      ja: "コンゴ共和国",
-      it: "Congo",
-      br: "Congo",
-      pt: "Congo",
-      nl: "Congo [Republiek]",
-      hr: "Kongo",
-      fa: "کنگو"
+    "translations": {
+      "de": "Kongo",
+      "es": "Congo",
+      "fr": "Congo",
+      "ja": "コンゴ共和国",
+      "it": "Congo",
+      "br": "Congo",
+      "pt": "Congo",
+      "nl": "Congo [Republiek]",
+      "hr": "Kongo",
+      "fa": "کنگو"
     },
-    flag: "https://restcountries.eu/data/cog.svg",
-    regionalBlocs: [
+    "flag": "https://restcountries.eu/data/cog.svg",
+    "regionalBlocs": [
       {
-        acronym: "AU",
-        name: "African Union",
-        otherAcronyms: [ ],
-        otherNames: [
+        "acronym": "AU",
+        "name": "African Union",
+        "otherAcronyms": [],
+        "otherNames": [
           "الاتحاد الأفريقي",
           "Union africaine",
           "União Africana",
@@ -121,15 +105,32 @@ Here's a sample response of one country:
         ]
       }
     ],
-    cioc: "CGO"
+    "cioc": "CGO"
   }
 ]
 ```
 
+### You do: Part 2: Componentize it
 
-### Bonus
+Now put each country into its own component. Pass the name of the country in as
+a prop. Render the entire list of countries.
 
-Put each country name into its own component. When you click on a component, make another request to search for the country by name. Using the response, display the capital of that country.
+### We do: Part 3: Clickify it
+
+Add an event listener so that when a country is clicked, it makes another
+request to search for the country by name. Using the response, display the
+capital of that country below the country name.
+
+For this part we'll use the search by name api endpoint:
+
+```
+https://restcountries.eu/rest/v2/name/{name}
+
+example:
+
+https://restcountries.eu/rest/v2/name/armenia
+```
+
 
 ## Plagiarism
 
