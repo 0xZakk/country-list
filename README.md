@@ -112,14 +112,21 @@ Here's a sample response of one country:
 
 ### You do: Part 2: Componentize it
 
-Now put each country into its own component. Pass the name of the country in as
-a prop. Render the entire list of countries.
+- Create a `Country` component.
+- Using this giant list of json data, render a `Country` component for each
+  entry.
+- Pass in the name of the country as a prop. Render the entire list of
+  countries, each in their own component.
 
 ### We do: Part 3: Clickify it
 
 Add an event listener so that when a country is clicked, it makes another
 request to search for the country by name. Using the response, display the
-capital of that country below the country name.
+capital, currency code, and the name of the first language below the country
+name.
+
+Yes, we could just pass the entire object down as a prop and use it directly. But
+let's pretend that we can't! Fun.
 
 For this part we'll use the search by name api endpoint:
 
@@ -130,7 +137,6 @@ example:
 
 https://restcountries.eu/rest/v2/name/armenia
 ```
-
 
 ## Plagiarism
 
