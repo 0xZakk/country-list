@@ -21,7 +21,7 @@ world using the [REST Countries](https://restcountries.eu) API.
 
 ## Requirements
 
-### Part 1: Build it (We do)
+### Part 1: Build it (I Do)
 
 Make it so that when the page loads (`App.js`), a list of all the countries in
 the world appears on the page. Use `fetch()` inside of `componentDidMount()` to
@@ -110,7 +110,7 @@ Here's a sample response of one country:
 ]
 ```
 
-### Part 2: Componentize it (You do)
+### Part 2: Componentize it (You Do)
 
 - Create a `Country` component.
 - Using this giant list of json data, render a `Country` component for each
@@ -121,7 +121,7 @@ Here's a sample response of one country:
 _NOTE:_ you might also choose to have a `CountryList` Container component in
 addition to the `Country` Presentational component.
 
-### Part 3: Clickify it (We do)
+### Bonus: Clickify it (We do)
 
 Add an event listener so that when a country is clicked, it makes another
 request to search for the country by name. Using the response, display the
