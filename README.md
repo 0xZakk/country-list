@@ -121,7 +121,7 @@ Here's a sample response of one country:
 _NOTE:_ you might also choose to have a `CountryList` Container component in
 addition to the `Country` Presentational component.
 
-### Bonus: Clickify it (We do)
+### Bonus: Clickify It
 
 Add an event listener so that when a country is clicked, it makes another
 request to search for the country by name. Using the response, display the
