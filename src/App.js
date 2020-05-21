@@ -8,8 +8,6 @@ class App extends Component {
 
     this.state = {
       countries: [],
-      showModal: false,
-      activeCountry: {},
     };
   }
 
@@ -30,9 +28,6 @@ class App extends Component {
       <div className="App">
         <h1>Countries of the World</h1>
         <CountryList countries={this.state.countries} />
-        {this.state.showModal && (
-          <Modal activeCountry={this.state.activeCountry} />
-        )}
       </div>
     );
   }
